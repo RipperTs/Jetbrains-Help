@@ -23,6 +23,16 @@
     </form>
 </header>
 <main id="product-list" class="px-6 z-grid py-10" style="--space: 20rem; --gutter: 3.5rem">
+
+    <dialog id="pathDialog">
+        <div>-javaagent:/(Your Path)/ja-netfilter/ja-netfilter.jar</div>
+        <div>--add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED</div>
+        <div>--add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED</div>
+        <form method="dialog" style="margin-top: 20px;">
+            <button>Close</button>
+        </form>
+    </dialog>
+
     <th:block th:fragment="product-list">
         <th:block th:each="product:${products}">
             <article class="card" th:data-product="${product.getName()}"

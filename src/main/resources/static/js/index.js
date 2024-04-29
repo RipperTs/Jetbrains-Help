@@ -33,12 +33,18 @@ $(document).ready(function() {
 
     // Function to show VM options
     window.showVmoptins = function () {
-        copyText("-javaagent:/(Your Path)/ja-netfilter/ja-netfilter.jar\n" +
-            "--add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED\n" +
-            "--add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED");
-
-        alert("复制成功，请粘贴到VM options中");
+        const favDialog = document.getElementById("pathDialog");
+        if (typeof favDialog.showModal === "function") {
+            favDialog.showModal();
+        }
     };
+
+    window.closePathDialog = function () {
+        const favDialog = document.getElementById("pathDialog");
+        if (typeof favDialog.showModal === "function") {
+            favDialog.close();
+        }
+    }
 
     // Function to copy license
     window.copyLicense = async function (e) {
