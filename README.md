@@ -54,3 +54,8 @@
 | 支持local/jar/dockerfile运行 |  ✅  |
 | 单码全家桶激活支持                |  ✅  |
 | ……                       | ☑️  |
+
+## 使用
+```bash
+docker compose build && docker compose up -d
+```
