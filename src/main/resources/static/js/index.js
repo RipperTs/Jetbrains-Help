@@ -25,8 +25,8 @@ $(document).ready(function() {
     // Function to show license form
     window.showLicenseForm = function () {
         let licenseInfo = JSON.parse(localStorage.getItem('licenseInfo'));
-        $('#licenseeName').val(licenseInfo?.licenseeName || '光云');
-        $('#assigneeName').val(licenseInfo?.assigneeName || '藏柏');
+        $('#licenseeName').val(licenseInfo?.licenseeName || 'ripper');
+        $('#assigneeName').val(licenseInfo?.assigneeName || 'ripper');
         $('#expiryDate').val(licenseInfo?.expiryDate || '2111-11-11');
         $('#mask, #form').show();
     };
